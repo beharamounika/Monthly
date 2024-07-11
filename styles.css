@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('border.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+.calendar {
+    background-color: rgba(0, 0, 0, 0.747); 
+    border-radius: 30%; 
+    box-shadow: 0 0 30px rgb(220, 223, 224);
+    overflow: hidden;
+    width: 90%;
+    max-width: 400px;
+    color: white;
+    padding: 20px;
+    aspect-ratio: 1 / 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+#month-year {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.weekdays, .days {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.days {
+    height: auto;
+    width: 100%;
+}
+
+.weekdays div, .days div {
+    width: 14.28%;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 5px;
+}
+
+.days div {
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.days div:hover {
+    background-color:rgba(255, 255, 255, 0.548);
+    color:black;
+}
+
+.days .today {
+    background-color: rgb(21, 226, 226);
+    color: black;
+}
+
+.days .fade {
+    color:grey;
+}
+
+@media (max-width: 600px) {
+    .calendar {
+        width: 100%;
+        padding: 10px;
+    }
+
+    #month-year {
+        font-size: 18px;
+    }
+
+    .weekdays div, .days div {
+        padding: 8px 0;
+    }
+
+    .days {
+        height: auto;
+    }
+}
